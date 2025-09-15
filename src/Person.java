@@ -1,6 +1,5 @@
 import java.util.Calendar;
 import java.util.Objects;
-import org.json.simple.JSONObject;
 
 public class Person {
     private String ID;
@@ -111,13 +110,13 @@ public class Person {
      * @return The JSON string.
      */
     public String toJSON() {
-        JSONObject obj = new JSONObject();
-        obj.put("ID", this.ID);
-        obj.put("firstName", this.firstName);
-        obj.put("lastName", this.lastName);
-        obj.put("title", this.title);
-        obj.put("YOB", this.YOB);
-        return obj.toJSONString();
+        return "{" +
+                "\"ID\": \"" + this.ID + "\"," +
+                "\"firstName\": \"" + this.firstName + "\"," +
+                "\"lastName\": \"" + this.lastName + "\"," +
+                "\"title\": \"" + this.title + "\"," +
+                "\"YOB\": " + this.YOB +
+                "}";
     }
 
     /**
