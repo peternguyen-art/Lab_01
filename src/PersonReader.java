@@ -11,9 +11,13 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import static java.lang.System.out;
+
+import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+
 import static java.nio.file.StandardOpenOption.CREATE;
 import javax.swing.JFileChooser;
 
@@ -34,6 +38,7 @@ public class PersonReader
         JFileChooser chooser = new JFileChooser();
         File selectedFile;
         String rec = "";
+        ArrayList<Person> persons = new ArrayList<>();
 
         try
         {
@@ -85,6 +90,10 @@ public class PersonReader
                         String lastName = parts[2].trim();
                         String title = parts[3].trim();
                         int yob = Integer.parseInt(parts[4].trim());
+
+                        // Person object and add to arrayList
+                        Person p = new Person(id, firstName, lastName, title, yob);
+                        persons.add(p);
 
                         // Print nicely formatted
                         String data = String.format(myFormat, id, firstName, lastName, title, yob);
