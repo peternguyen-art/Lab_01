@@ -28,6 +28,8 @@ public class PersonGenerator {
 
         ArrayList<String> csvPersons = new ArrayList<>();
 
+        ArrayList<Person> persons = new ArrayList<>();
+
         //define user dir
         File workingDirectory = new File(System.getProperty("user.dir"));
         Path file = Paths.get(workingDirectory.getPath() + "\\src\\PersonTestData.txt");
@@ -39,6 +41,10 @@ public class PersonGenerator {
             lastname = SafeInput.getNonZeroLenString(in, "Enter Last name");
             title = SafeInput.getNonZeroLenString(in, "Enter Title");
             yearOfBirth = SafeInput.getRangedInt(in, "Enter your YOB", 1000, 9999);
+
+            Person p = new Person(ID, firstname, lastname, title, yearOfBirth);
+
+            persons.add(p);
 
             CSVPersonRec = ID + ", " + firstname + ", " + lastname + ", " + title + ", " + yearOfBirth;
 
@@ -61,6 +67,11 @@ public class PersonGenerator {
                     new BufferedWriter(new OutputStreamWriter(out));
 
             // Finally can write the file LOL!
+
+            for(Person p:persons){
+                writer.write(p.toCSV());
+                writer.newLine();
+            }
 
             for(String rec : csvPersons)
             {

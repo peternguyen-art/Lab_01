@@ -80,11 +80,11 @@ public class PersonTest {
     @Test
     void toJSON() {
         String expected = "{" +
-                "\"ID\":\"00000A\"," +
-                "\"FirstName\":\"Bob\"," +
-                "\"LastName\":\"Tester 1\"," +
-                "\"Title\":\"Mr.\"," +
-                "\"YOB\":1995," +
+                "\"ID\": \"00000A\"," +
+                "\"firstName\": \"Bob\"," +
+                "\"lastName\": \"Tester 1\"," +
+                "\"title\": \"Mr.\"," +
+                "\"YOB\": 1995" +
                 "}";
         assertEquals(expected, p1.toJSON());
     }

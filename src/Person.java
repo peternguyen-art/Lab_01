@@ -101,7 +101,7 @@ public class Person {
      * @return The CSV string.
      */
     public String toCSV() {
-        return ID + "," + firstName + "," + lastName + "," + title + "," + YOB;
+        return ID + ", " + firstName + ", " + lastName + ", " + title + ", " + YOB;
     }
 
     /**
