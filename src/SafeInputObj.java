@@ -21,7 +21,6 @@ public class SafeInputObj {
     }
     /**
      * Get an int value within a specified numeric range
-     * @param pipe - Scanner instance to read the data System.in in most cases
      * @param prompt - input prompt msg should not include range info
      * @param low - low end of inclusive range
      * @param high - high end of inclusive range
