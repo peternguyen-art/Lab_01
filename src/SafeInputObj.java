@@ -61,7 +61,6 @@ public class SafeInputObj {
 
     /**
      * Get an int value with no constraints
-     * @param pipe - Scanner instance to read the data System.in in most cases
      * @param prompt - input prompt msg should not include range info
      * @return - unconstrained int value
      */
@@ -93,7 +92,6 @@ public class SafeInputObj {
 
     /**
      * get a double value within an inclusive range
-     * @param pipe - Scanner instance to read the data System.in in most cases
      * @param prompt - input prompt msg should not contain range info
      * @param low - low value inclusive
      * @param high - high value inclusive
@@ -133,7 +131,6 @@ public class SafeInputObj {
 
     /**
      * Get an unconstrained double value
-     * @param pipe - Scanner instance to read the data System.in in most cases
      * @param prompt - input prompt msg should not contain range info
      * @return  - an unconstrained double value
      */
@@ -164,7 +161,6 @@ public class SafeInputObj {
 
     /**
      * Get a [Y/N] confirmation from the user
-     * @param pipe - Scanner instance to read the data System.in in most cases
      * @param prompt -input prompt msg for user does not need [Y/N]
      * @return - true for yes false for no
      */
@@ -199,7 +195,6 @@ public class SafeInputObj {
     }
     /**
      * Get a string that matches a RegEx pattern! This is a very powerful method
-     * @param pipe - Scanner instance to read the data System.in in most cases
      * @param prompt - prompt for user
      * @param regExPattern - java style RegEx pattern to constrain the input
      * @return a String that matches the RegEx pattern supplied
